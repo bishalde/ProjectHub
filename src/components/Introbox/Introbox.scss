@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+$poppins: "Poppins", sans-serif;
+$black: #000000;
+$white: #ffffff;
+$secondaryColor: rgb(232, 185, 15);
+$secondayColor2: rgb(175, 173, 173);
+
+.introbox {
+    position: relative;
+    padding: 0px 40px 0px 0px;
+    top: 90px;
+    width: 100%;
+
+    .frontbox {
+        display: flex;
+        justify-content: center;
+
+        .center {
+            width: 55%;
+            height: 85vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .leftbox {
+            h1 {
+                font-size: 4.5rem;
+                font-weight: 600;
+                line-height: 90px;
+            }
+
+            p {
+                margin: 35px 0px;
+                font-size: 1rem;
+                line-height: 30px;
+                color: $secondayColor2;
+            }
+
+            a {
+                padding: 10px 20px;
+                text-decoration: none;
+                color: $white;
+                font-size: 0.85rem;
+                font-weight: 400;
+                line-height: 30px;
+                border: 1px solid $secondayColor2;
+                border-radius: 10px;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+
+        @keyframes animatedBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 0;
+            }
+        }
+
+        .rightbox {
+            position: relative;
+            width: 50%;
+            height: 85vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            .leftcontainer,
+            .rightcontainer,
+            .middlecontainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                #img1 {
+                    background-image: url("https://source.unsplash.com/random?coding");
+                }
+                #img2 {
+                    background-image: url("https://source.unsplash.com/random?computer");
+                }
+                #img3 {
+                    background-image: url("https://source.unsplash.com/random?artificialintelligence");
+                }
+                #img4 {
+                    background-image: url("https://source.unsplash.com/random?robotics");
+                }
+                #img5 {
+                    background-image: url("https://source.unsplash.com/random?machinelearning");
+                }
+                #img6 {
+                    background-image: url("https://source.unsplash.com/random?programming");
+                }
+                #img7 {
+                    background-image: url("https://source.unsplash.com/random?software");
+                }
+            }
+
+            .photobox {
+                width: 30%;
+                height: 100%;
+            }
+
+            .imagediv {
+                width: 100%;
+                height: 40%;
+                border-radius: 20px;
+                background-position: center;
+                background-size: cover;
+
+                background-position: 0px 0px;
+                background-repeat: repeat-x;
+                animation: animatedBackground 10s linear infinite alternate;
+            }
+        }
+    }
+}
+
+.information {
+    position: relative;
+    top: 120px;
+    width: 100%;
+    border-bottom: 1px solid rgb(55, 55, 55);
+
+    padding: 50px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .info {
+        text-align: center;
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 90px;
+            color: $secondaryColor;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 60px;
+        }
+    }
+
+    .infocontainer {
+        width: 80%;
+        margin-top: 50px;
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .infobox {
+            width: 45%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 20px;
+
+            h1 {
+                font-size: 1rem;
+            }
+            h3 {
+                font-size: 0.8rem;
+                color: $secondayColor2;
+                text-align: center;
+            }
+
+            &:hover {
+                border: 1px solid $secondayColor2;
+            }
+        }
+    }
+}
