@@ -58,12 +58,12 @@ const Navbar = () => {
         Github
         </NavLink>
         <NavLink
-          to="/addproject"
+          to="/Login"
           className={({ isActive, isPending }) =>
             isPending ? "" : isActive ? "active" : ""
           }
         >
-        Add
+        Login
         </NavLink>
       </div>
     </section>
