@@ -61,6 +61,23 @@ const Introbox = () => {
             <h3>This project is free to use and you don't have to pay anything.</h3>
         </div>
     </div>
+    <section className="stats">
+    <h1>Our Stats</h1>
+    <div className="statsbox">
+      <div className="stats-box">
+        <h1>Website Visits</h1>
+        <h4>5</h4>
+      </div>
+      <div className="stats-box">
+        <h1>Projects</h1>
+        <h4>12</h4>
+      </div>
+      <div className="stats-box">
+        <h1>Users</h1>
+        <h4>70</h4>
+      </div>
+    </div>
+    </section>
     </section>
     </>
   );

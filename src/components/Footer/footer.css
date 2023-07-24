@@ -49,4 +49,28 @@ footer .footercompany h2 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-}/*# sourceMappingURL=footer.css.map */
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+  footer .footerinfo {
+    align-items: center;
+    text-align: center;
+  }
+  footer .footerinfo h1 {
+    font-size: 2rem;
+  }
+  footer .footerinfo h4 {
+    font-size: 0.75rem;
+  }
+  footer .footercompany h2 {
+    font-size: 1.1rem;
+  }
+  .fbox {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,8 +1,20 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link, NavLink } from "react-router-dom";
-
 import "./Navbar.css";
+
+
 const Navbar = () => {
+  const[navclass,setNavclass]=useState("links")
+
+  const navChange=()=>{
+    if(navclass==="links"){
+      setNavclass("links navActive")
+    }
+    else{
+      setNavclass("links")
+    }
+  }
+
   return (
     <section className="navbar">
       <div className="logo">
@@ -13,7 +25,14 @@ const Navbar = () => {
         </h1>
         </Link>
       </div>
-      <div className="links">
+
+      <div className="hamberger" onClick={navChange}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div className={navclass}>
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
