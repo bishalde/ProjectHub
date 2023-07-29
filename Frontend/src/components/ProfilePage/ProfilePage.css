@@ -1,0 +1,153 @@
+.profilesection {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  padding: 30px;
+}
+.profilesection .profilebox {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgb(175, 173, 173);
+  gap: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profilesection .profilebox .box {
+  height: 100%;
+  border-radius: 10px;
+}
+.profilesection .profilebox .leftbox {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+}
+.profilesection .profilebox .leftbox .profileimg {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.profilesection .profilebox .rightbox {
+  width: 70%;
+}
+.profilesection .profilebox .rightbox h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.profilesection .profilebox .rightbox a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(232, 185, 15);
+  line-height: 40px;
+}
+.profilesection .profilebox .rightbox a.editbtn {
+  position: relative;
+  top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 30px;
+  border: 1px solid rgb(175, 173, 173);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.profilesection .profilebox .rightbox a.editbtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+.profilesection .profilebox .rightbox h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.profilesection .profilebox .rightbox .sociallinks {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.profilesection .profilebox .rightbox .sociallinks img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.profilesection .profilebox .rightbox .sociallinks img:hover {
+  scale: 1.1;
+}
+
+.addprojectsection {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.addprojectsection form {
+  display: flex;
+  flex-direction: column;
+}
+.addprojectsection form h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.addprojectsection form label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.addprojectsection form input {
+  outline: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(175, 173, 173);
+  padding: 0 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.addprojectsection form textarea {
+  border-radius: 10px;
+  min-width: 100%;
+  max-width: 100%;
+  border: 1px solid rgb(175, 173, 173);
+}
+.addprojectsection form h5 {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+.addprojectsection form .post-btn button {
+  padding: 10px 20px;
+  width: 150px;
+  margin: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 30px;
+  border: 1px solid rgb(175, 173, 173);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.addprojectsection form .post-btn button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+.addprojectsection form .post-btn button.sec {
+  background-color: rgb(232, 185, 15);
+  color: #ffffff;
+  border: 1px solid rgb(232, 185, 15);
+}
+.addprojectsection form .post-btn button.sec:hover {
+  background-color: #ffffff;
+  color: #000000;
+}/*# sourceMappingURL=ProfilePage.css.map */
