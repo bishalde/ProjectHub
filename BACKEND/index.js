@@ -10,6 +10,10 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+
+const login = require("./routes/login")
+const signup = require("./routes/signup")
+
 //HOMEPAGE URL
 app.get("/", (req, res) => {
     res.status(200).json(
@@ -17,7 +21,19 @@ app.get("/", (req, res) => {
         "message": "Welcome to ProjectTree API's..!"
       }
     );
-  });
+});
+app.post("/", (req, res) => {
+    res.status(200).json(
+      {
+        "message": "Welcome to ProjectTree API's..!"
+      }
+    );
+});
+
+app.post("/login", login)
+app.post("/signup", signup)
+
+
 
 app.get('*', (req, res) => {
     res.status(404).json({
