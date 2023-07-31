@@ -11,6 +11,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
+const mongoose = require("mongoose") // new
+
+// Connect to MongoDB database
+mongoose
+	.connect("mongodb+srv://bishalde:bishalde@projecttreedb.gckjyxg.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true })
+	.then(
+    console.log("Connected to MongoDB database")
+  )
+	.catch((err) => console.log(err))
+
 const login = require("./routes/login")
 const signup = require("./routes/signup")
 
