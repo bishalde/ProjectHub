@@ -45,6 +45,7 @@ app.listen(port, () => {
     console.error(err.stack)
     res.status(500).send(`Error : ${err}`);
   })
+  
   const db= require('./db/conn')
 
 
