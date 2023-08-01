@@ -1,25 +1,17 @@
 const express = require("express")
 const cors = require('cors')
+const serverless= require('serverless-http')
 require("dotenv").config()
 
 const app = express()
 const port = process.env.PORT || 5741
 
+// require('./db/conn')
 
 app.use(cors()) 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
 
-const mongoose = require("mongoose") // new
-
-// Connect to MongoDB database
-mongoose
-	.connect("mongodb+srv://bishalde:bishalde@projecttreedb.gckjyxg.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true })
-	.then(
-    console.log("Connected to MongoDB database")
-  )
-	.catch((err) => console.log(err))
 
 const login = require("./routes/login")
 const signup = require("./routes/signup")
@@ -32,13 +24,8 @@ app.get("/", (req, res) => {
       }
     );
 });
-app.post("/", (req, res) => {
-    res.status(200).json(
-      {
-        "message": "Welcome to ProjectTree API's..!"
-      }
-    );
-});
+
+
 
 app.post("/login", login)
 app.post("/signup", signup)
@@ -55,4 +42,9 @@ app.listen(port, () => {
     console.log(`MyBackendAPIS's is listening at http://localhost:${port}`);
   });
   
-module.exports = app
+  app.use((err, req, res, next) => {
+    console.error(err.stack)
+    res.status(500).send(`Error : ${err}`);
+  })
+  
+module.exports.handler = serverless(app);
