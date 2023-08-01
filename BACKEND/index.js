@@ -6,7 +6,6 @@ require("dotenv").config()
 const app = express()
 const port = process.env.PORT || 5741
 
-// require('./db/conn')
 
 app.use(cors()) 
 app.use(express.json());
@@ -46,5 +45,8 @@ app.listen(port, () => {
     console.error(err.stack)
     res.status(500).send(`Error : ${err}`);
   })
-  
+  const db= require('./db/conn')
+
+
+
 module.exports.handler = serverless(app);
